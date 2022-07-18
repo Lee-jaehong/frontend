@@ -7,6 +7,16 @@
 <body>
     <h2>하이퍼링크 상대경로 테스트</h2>
     test0.html
+    <!-- 2)하위폴더? 하위폴더명/파일명으로 합니다.test0.html에서 확인.
+            test0.html 현재파일이 위치한 폴더는 frontend의 하위폴더 파일로 가는 경우. 
+            -->
+    day1 폴더 파일로 링크: <a href="day1/0start.html">0start.html</a><br>
+    bro 폴더 파일로 링크: <a href="bro/test1.html">test1.html</a><br>
+    day1 폴더 파일로 링크: <a href="./day1/0start.html">0start.html</a><br>
+    bro 폴더 파일로 링크: <a href="./bro/test1.html">test1.html</a><br>
+    bro 폴더 파일로 링크: <a href="file:///D:/iclass05/frontend/bro/test1.html">test1.html</a>
+
+    <!-- 절대 경로: 생략하지 않고 파일의 위치를 경로명 전체 지정하는 방법 -->
     
 </body>
 </html>
