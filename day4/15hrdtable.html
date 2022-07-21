@@ -4,14 +4,59 @@
     <meta charset="UTF-8">
     <title>hrdtable</title>
     <style>
-
+        body{
+            margin: 0px;
+        }
         td{
             border: 1px solid gray;
             text-align: center;
         }
+        .header{
+            
+            background-color: blue; color: white; width: 100%; height: 100%; text-align: center; padding: 20px; margin: 0;
+        }
+
+        .nav{
+            background-color: cornflowerblue;
+        }
+        ul{
+            list-style: none;
+            margin: auto;
+            overflow: hidden;
+        }
+        ul > li{
+            float: left;
+        }
+        ul > li a{
+             color: white; text-decoration: none; display: block; padding: 14px 16px; text-align: center;
+        }
+        ul > li a:hover{
+        background-color: black;
+        color: white;
+        }
+        .main{
+            background-color: lightgrey;
+            padding: 20px;
+            height: 600px;
+        }
+        .footer{
+        background-color: cornflowerblue;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        }
     </style>
 </head>
+
 <body>
+    <div class="header"><h1>쇼핑몰 회원관리 ver 1.0</h1></div>
+    <div class="nav"><ul>
+        <li><a href="">회원등록</a></li>
+        <li><a href="">회원목록조회/수정</a></li>
+        <li><a href="">회원매출조회</a></li>
+        <li><a href="">홈으로.</a></li>
+    </ul></div>
+    <div class="main">
     <h3 style="text-align: center;"> 회원목록조회/수정 </h3>
     <table style="border: 1px solid gray; margin: auto; width: 1600px;">
         <tr>
@@ -42,7 +87,7 @@
             <td>01</td>
         </tr>
         <tr>
-            <td style="color: white;">100003</td>
+            <td">100003</td>
             <td>장믿음</td>
             <td>010-1111-4444</td>
             <td>울릉군 울릉읍 독도1리</td>
@@ -77,6 +122,10 @@
             <td>직원</td>
             <td>60</td>
         </tr>
-    </table>
+    </table></div>
+    <div class="footer">   
+        <!-- footer -->
+        HRDKOREA Copyright&copy;2022 All rights reserved. Human Resources Development Service of Korea.
+    </div>
 </body>
 </html>
