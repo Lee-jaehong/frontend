@@ -51,13 +51,13 @@
       /* Left column */
       .leftcolumn {   
         float: left;
-        width: 75%;
+        width: 60%;
       }
       
       /* Right column */
       .rightcolumn {
         float: left;
-        width: 25%;
+        width: 40%;
         background-color: #f1f1f1;
         padding-left: 20px;
       }
@@ -76,11 +76,11 @@
         margin-top: 20px;
       }
       
-      /* Clear floats after the columns */
+      /* Clear floats after the columns : pseudo 요소는 ::after, ::before*/
       .row:after {
         content: "";
         display: table;
-        clear: both;
+        clear: both; /* float:left를 클리어 */
       }
       
       /* Footer */
@@ -91,7 +91,10 @@
         margin-top: 20px;
       }
       
-      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+      /* Responsive layout 반응형
+      반응형 레이아웃 :  flexbox
+      - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other 
+      너비가 0~800은 아래의 스타일을 적용*/
       @media screen and (max-width: 800px) {
         .leftcolumn, .rightcolumn {   
           width: 100%;
@@ -110,8 +113,8 @@
 </head>
 <body>
     <div class="header">
-        <h1>My Website</h1>
-        <p>Resize the browser window to see the effect.</p>
+        <h1>고양이</h1>
+        <p>크다</p>
       </div>
       
       <div class="topnav">
@@ -124,17 +127,17 @@
       <div class="row">
         <div class="leftcolumn">
           <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2017</h5>
+            <h2>뚱뚱</h2>
+            <h5>뚱뚱뚱</h5>
             <div class="fakeimg" style="height:200px; padding: 0;">
-            <a target="_blank" href="https://raw.githubusercontent.com/Lee-jaehong/frontend/master/images/KakaoTalk_20220719_152821945.jpg">
-                <img src="https://raw.githubusercontent.com/Lee-jaehong/frontend/master/images/KakaoTalk_20220719_152821945.jpg" alt="cat" style="width: 100%; height: 100%;"></a></div>
+                <a target="_blank" href="https://raw.githubusercontent.com/Lee-jaehong/frontend/master/images/KakaoTalk_20220719_152821945.jpg">
+            <img src="https://raw.githubusercontent.com/Lee-jaehong/frontend/master/images/KakaoTalk_20220719_152821945.jpg" alt="cat" style="width: 100%; height: 100%;"></a></div>
             <p>뚱뚱하다</p>
             <p>고양이가 앉아있다.</p>
           </div>
           <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
+            <h2>뚱뚱</h2>
+            <h5>뚱뚱뚱</h5>
             <div class="fakeimg" style="height:200px; padding: 0;">
                 <a target="_blank" href="https://raw.githubusercontent.com/Lee-jaehong/frontend/master/images/cat.jpg">
                     <img src="https://raw.githubusercontent.com/Lee-jaehong/frontend/master/images/cat.jpg" alt="cat" style="width: 100%; height: 100%;"></a>
