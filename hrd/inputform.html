@@ -13,10 +13,11 @@
         }
 
     </style>
-    <script src="/hrd/validForm.js"></script>
+    <script src="validForm.js"></script>
 </head>
 <body>
         <h3 style="text-align: center;"> 홈쇼핑 회원 등록 </h3>
+        <form action="">
     <table style="margin: auto; border: 1px solid gray; width: 800px;">
         <tr>
             <td><label for="lblcus_id">회원번호(자동발생)</label></td>
@@ -48,10 +49,14 @@
         </tr>
         <tr>
             <td colspan="2">
-                <button>등록</button>
+                <button onclick="valid_check()">등록</button>
                 <button>조회</button>
             </td>
         </tr>
     </table>
+    </form>
+    <script>
+        document.getElementById("lbldate").value = result;
+    </script>
 </body>
 </html>

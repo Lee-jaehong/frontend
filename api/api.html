@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="c"></p>
+    <script>
+
+    const search = function(){
+    //비동기 통신을 위한 객체 생성
+    const xhr = new XMLHttpRequest();
+    //1.HTTP 요청 초기화 : method.url
+    xhr.open("GET", "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=52e4c7f78d63c4a05aacfb5c7a8beaa6&targetDt=20220717");        //size는 기본값 10
+    //2.요청header 설정
+    // xhr.setRequestHeader("Authorization", "KakaoAK 0ba9e827eb4d86da4dc7719760f46969");
+    //3 HTTP요청 전송
+    xhr.send();
+
+    //4.onload : 요청이 완료되고 이에 대한 응답이 왔을 때 실행될 onload 이벤트 핸들러 작성.
+    xhr.onload= function(){
+    if(xhr.status=200) { //응답코드가 200일때만
+  
+
+    let $response = JSON.parse(xhr.response)
+    let results = $response.boxOfficeResult.dailyBoxOfficeList[0]   //author, datetime, title, url, play-time, thumbnail 속성으로 구성된 객체배열
+    
+
+    console.log(Object.values(results)[0])
+    document.getElementById("c").innerHTML=Object.values(results)[5]
+   
+
+
+    
+
+    }
+    }
+}
+search()
+    </script>
+</body>
+</html>
